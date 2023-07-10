@@ -7,7 +7,6 @@
 !*/cache/.htaccess
 
 system/
-Template/
 time-Sheet/
 
 #codeigniter 3

@@ -23,7 +23,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$dev_base_url = 'http://localhost:80/u-work/';
+$dev_base_url = 'http://localhost/i-rezime/';
 $prod_base_url = 'http://i-rezime.alwaysdata.net/';
 $config['base_url'] = $dev_base_url;
 
