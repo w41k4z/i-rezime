@@ -35,6 +35,18 @@ class IndexController extends CI_Controller
 	}
 
 	// --------------------------------------------------
+	public function login()
+	{
+		$this->load->view('autentifications/Login');
+	}
+	public function signin()
+	{
+		$this->load->view('autentifications/Signin');
+	}
+	public function information()
+	{
+		$this->load->view('autentifications/Information');
+	}
 	public function emploiDuTemps()
 	{
 		$this->viewer('client/EmploiDuTemps', []);
