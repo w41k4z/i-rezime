@@ -59,7 +59,3 @@
     </div>
 
 </section>
-
-<?php
-    // $this->load->view('template/Deco');
-?>
