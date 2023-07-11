@@ -1,16 +1,19 @@
 <section class="py-4 overflow-hidden">
+    <div class="bg-holder fond-home" style="background-image:url(assets/img/gallery/cta-one-bg.png);background-position:center;height:100vh;">
+    </div>
 
     <div class="container">
         <div class="row h-100">
             <div class="col-lg-7 mx-auto text-center mt-7 mb-5">
-                <h5 class="fw-bold fs-3 fs-lg-5 lh-sm">Faites votre choix</h5>
+                <h5 class="fw-bold fs-3 fs-lg-5 lh-sm"> - Faites votre choix - </h5>
             </div>
             <div class="col-12">
                 <div class="carousel slide" id="carouselPopularItems" data-bs-touch="false" data-bs-interval="false">
                     <div class="carousel-inner">
                         <div class="carousel-item active" data-bs-interval="10000">
-                            <div class="row align-items-center">
-                                <div class="col-sm-6 col-md-4 col-xl mb-5 h-100 regimeChoix">
+                            <div class="row gx-3 h-100 align-items-center">
+                
+                            <div class="col-sm-6 col-md-4 col-xl mb-5 h-100 regimeChoix">
                                     <form action="<?php echo base_url('index.php/IndexController/regimeChoix')?>" method="post">
                                         <div class="card card-span h-100 rounded-3">
                                             <div class="card-body ps-0">
