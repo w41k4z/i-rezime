@@ -8,7 +8,7 @@
 
             <div class="col-md-6">
                 <div class="col-lg-6 text-center mx-auto mb-3 mb-md-5 mt-4">
-                    <h4 class="Classification">Perdre</h4>
+                    <h4>Perdre</h4>
                 </div>
                 <div class="row h-100 gx-2 mt-7">
                     <?php for($i =0; $i<count($perdre);$i++){?>
@@ -50,7 +50,7 @@
 
             <div class="col-md-6">
                 <div class="col-lg-6 text-center mx-auto mb-3 mb-md-5 mt-4">
-                    <h4 class="Classification">Gagner</h4>
+                    <h4>Gagner</h4>
                 </div>
                 <div class="row h-100 gx-2 mt-7">
                 <?php for($i =0; $i<count($gagner);$i++){?>
