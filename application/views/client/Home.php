@@ -1,4 +1,6 @@
 <section class="py-4 overflow-hidden">
+    <div class="bg-holder fond-home" style="background-image:url(assets/img/gallery/cta-one-bg.png);background-position:center;height:100vh;">
+    </div>
 
     <div class="container">
         <div class="row h-100">
