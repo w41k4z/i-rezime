@@ -34,7 +34,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-3 choixRegime">
-                                        <a class="btn btn-lg btn-danger" href="#!" role="button">Choisir</a>
+                                        <a class="btn btn-lg btn-danger" href="" role="button">Choisir</a>
                                     </div>
 
                                     <div class="col-md-4 choixRegime" style="margin-left:15%">
