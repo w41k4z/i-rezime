@@ -7,6 +7,9 @@ class IndexController extends CI_Controller
     {
         parent::__construct();
         $this->load->model('RegimeModels');
+		if(!$_SESSION['userdata']){
+			$this->load->view('autentifications/Login');
+		}
     }
 	private function viewer($page, $data)
 	{

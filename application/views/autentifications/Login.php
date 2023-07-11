@@ -19,24 +19,15 @@
                     <div class="auth-form-light text-left py-5 px-4 px-sm-5">
                         <h4>Bonjour! C'est un plaisir de vous revoir</h4>
                         <h6 class="font-weight-light">Connecter vous a votre compte.</h6>
-                        <form class="pt-3">
+                        <form class="pt-3" method="post" action ="<?php echo base_url("index.php/HomeController/login")?>">
                             <div class="form-group">
-                                <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Nom Utilisateur">
+                                <input type="email" name="mail" value ="alainricor@gmail.com"class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Entrer Votre Mail">
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Mot de passe">
+                                <input type="password" name="mdp" value="1234" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Mot de passe">
                             </div>
                             <div class="mt-3">
                             <input class="btn btn-block btn-warning btn-lg font-weight-medium auth-form-btn" type="submit" value="LOG IN">
-                            </div>
-                            <div class="my-2 d-flex justify-content-between align-items-center">
-                                <div class="form-check">
-                                    <label class="form-check-label text-muted">
-                                    <input type="checkbox" class="form-check-input">
-                                    S'en souvenir
-                                    </label>
-                                </div>
-                                <a href="#" class="auth-link text-black">Forgot password?</a>
                             </div>
                             <div class="text-center mt-4 font-weight-light">
                                 Vous n'avez pas encore de compte?<br><a href="register.html" class="text-primary">Creez-en un</a>
