@@ -38,7 +38,7 @@
                                     </div>
 
                                     <div class="col-md-4 choixRegime" style="margin-left:15%">
-                                        <a class="btn btn-lg btn-danger" href="#!" role="button">Detail</a>
+                                        <a class="btn btn-lg btn-danger" href="<?php echo base_url('index.php/IndexController/emploiDuTemps')?>?id=<?= $perdre[$i]['id']?>" role="button">Detail</a>
                                     </div>
                                 </div>
                             </div>
@@ -80,7 +80,7 @@
                                     </div>
 
                                     <div class="col-md-4 choixRegime" style="margin-left:15%">
-                                        <a class="btn btn-lg btn-danger" href="#!" role="button">Detail</a>
+                                        <a class="btn btn-lg btn-danger" href="<?php echo base_url('index.php/IndexController/emploiDuTemps')?>?id=<?= $gagner[$i]['id']?>" role="button">Detail</a>
                                     </div>
                                 </div>
                             </div>

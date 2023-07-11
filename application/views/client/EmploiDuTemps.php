@@ -17,48 +17,21 @@
                                         <th>Soir</th>
                                     </thead>
                                     <tbody>
+                                    <?php 
+                                        $j=0;
+                                        $total = (7*$regime[0]['duree']);
+                                        while ($j< $total){?>
+                                        <?php for($i =0 ; $i<count($table);$i++){
+                                            $j++;
+                                            ?>
                                         <tr>
-                                            <td>1</td>
-                                            <td>A</td>
-                                            <td>D</td>
-                                            <td>B</td>
+                                            <td><?= $j?></td>
+                                            <td><?= $table[$i]['matin']?></td>
+                                            <td><?= $table[$i]['midi']?></td>
+                                            <td><?= $table[$i]['soir']?></td>
                                         </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>D</td>
-                                            <td>E</td>
-                                            <td>C</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>A</td>
-                                            <td>E</td>
-                                            <td>D</td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>C</td>
-                                            <td>B</td>
-                                            <td>E</td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td>A</td>
-                                            <td>D</td>
-                                            <td>B</td>
-                                        </tr>
-                                        <tr>
-                                            <td>6</td>
-                                            <td>C</td>
-                                            <td>A</td>
-                                            <td>D</td>
-                                        </tr>
-                                        <tr>
-                                            <td>7</td>
-                                            <td>B</td>
-                                            <td>C</td>
-                                            <td>D</td>
-                                        </tr>
+                                        <?php }?>
+                                    <?php }?>
                                     </tbody>
                                 </table>
                             </div>

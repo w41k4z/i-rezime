@@ -42,8 +42,13 @@ class IndexController extends CI_Controller
 	// --------------------------------------------------
 	public function emploiDuTemps()
 	{
-		$this->viewer('client/EmploiDuTemps', []);
+		$id_regime=$_GET['id'];	
+		$regime = $this->RegimeModels->regime_par_id($id_regime);
+		$table = $this->RegimeModels->detail_regime_par_categorie($id_regime);
+		$data = array('table'=> $table,'regime' => $regime);
+		$this->viewer('client/EmploiDuTemps',$data);
 	}
+	// -----------------------------------------------------
 	public function code()
 	{
 		$this->viewer('client/Code',[]);

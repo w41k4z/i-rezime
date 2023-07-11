@@ -17,6 +17,35 @@ class RegimeModels extends CI_Model
         }
         return $data;
     }
+    public function regime_par_id($id){
+        $data = array();
+        $sql = "select * from regime where id = ".$id;
+        $query = $this->db->query($sql);
+        if (!$query) {
+            throw new Exception('The code you are referencing is already used');
+        } else {
+            foreach ($query->result_array() as $row) {
+                $data[] = $row;
+            }
+        }
+        return $data;
+    }
+    public function detail_regime_par_categorie($id_regime){
+        $data = array();
+        $sql = "select dr.id_regime,(select nom from plat where id = id_plat_matin) matin,(select nom from plat where id = id_plat_midi) midi,
+        (select nom from plat where id = id_plat_soir) soir
+        from detail_regime dr 
+        where id_regime =".$id_regime;
+        $query = $this->db->query($sql);
+        if (!$query) {
+            throw new Exception('The code you are referencing is already used');
+        } else {
+            foreach ($query->result_array() as $row) {
+                $data[] = $row;
+            }
+        }
+        return $data;
+    }
     public function trier_par_type($table,$types){
         $data;
         $a = 0;
