@@ -22,6 +22,11 @@ class IndexController extends CI_Controller
 		$this->viewer('client/Home', []);
 	}
 
+	public function emploieduTemps()
+	{
+		$this->viewer('client/EmploiDuTemps', []);
+	}
+
 	public function regimeChoix(){
 		$poid=$_POST['poids'];
 		$categorie=$_POST['id_categorie'];
