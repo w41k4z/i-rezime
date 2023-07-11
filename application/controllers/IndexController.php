@@ -52,8 +52,16 @@ class IndexController extends CI_Controller
 	}
 	public function emploiDuTemps()
 	{
-		$this->viewer('client/EmploiDuTemps', []);
+		$id_regime=$_GET['id'];	
+		$regime = $this->RegimeModels->regime_par_id($id_regime);
+		$facile = $this->RegimeModels->activite_par_regime(1);
+		$moyen = $this->RegimeModels->activite_par_regime(2);
+		$difficile = $this->RegimeModels->activite_par_regime(3);
+		$table = $this->RegimeModels->detail_regime_par_categorie($id_regime);
+		$data = array('table'=> $table,'regime' => $regime,'facile'=> $facile,'moyen'=>$moyen,'difficile'=>$difficile);
+		$this->viewer('client/EmploiDuTemps',$data);
 	}
+	// -----------------------------------------------------
 	public function code()
 	{
 		$this->viewer('client/Code',[]);

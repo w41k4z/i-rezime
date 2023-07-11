@@ -15,50 +15,25 @@
                                         <th>Matin</th>
                                         <th>Midi</th>
                                         <th>Soir</th>
+                                        <th>Activites</th>
                                     </thead>
                                     <tbody>
+                                    <?php 
+                                        $j=0;
+                                        $total = (7*$regime[0]['duree']);
+                                        while ($j< $total){?>
+                                        <?php for($i =0 ; $i<count($table);$i++){
+                                            $j++;
+                                            ?>
                                         <tr>
-                                            <td>1</td>
-                                            <td>A</td>
-                                            <td>D</td>
-                                            <td>B</td>
+                                            <td><?= $j?></td>
+                                            <td><?= $table[$i]['matin']?></td>
+                                            <td><?= $table[$i]['midi']?></td>
+                                            <td><?= $table[$i]['soir']?></td>
+                                            <td><?= $table[$i]['intituleNiveau']?></td>
                                         </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>D</td>
-                                            <td>E</td>
-                                            <td>C</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>A</td>
-                                            <td>E</td>
-                                            <td>D</td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>C</td>
-                                            <td>B</td>
-                                            <td>E</td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td>A</td>
-                                            <td>D</td>
-                                            <td>B</td>
-                                        </tr>
-                                        <tr>
-                                            <td>6</td>
-                                            <td>C</td>
-                                            <td>A</td>
-                                            <td>D</td>
-                                        </tr>
-                                        <tr>
-                                            <td>7</td>
-                                            <td>B</td>
-                                            <td>C</td>
-                                            <td>D</td>
-                                        </tr>
+                                        <?php }?>
+                                    <?php }?>
                                     </tbody>
                                 </table>
                             </div>
@@ -84,9 +59,10 @@
                                             <div class="service-cap">
                                                 <h4>Facile</h4>
                                                 <ul>
-                                                    <li>pont</li>
-                                                    <li>pompe</li>
-                                                    <li>flection</li>
+                                                    <?php for ($i=0; $i <count($facile) ; $i++) { ?>
+                                                        <li><h6><?= $facile[$i]['nom']?></h6></li>
+                                                        <p><?= $facile[$i]['quantite']?></p>
+                                                    <?php }?>
                                                 </ul>
                                             </div>
                                         </div>
@@ -99,9 +75,10 @@
                                             <div class="service-cap">
                                                 <h4>Moyen</h4>
                                                 <ul>
-                                                    <li>pont</li>
-                                                    <li>pompe</li>
-                                                    <li>flection</li>
+                                                    <?php for ($i=0; $i <count($moyen) ; $i++) { ?>
+                                                            <li><h6><?= $moyen[$i]['nom']?></h6></li>
+                                                            <p><?= $moyen[$i]['quantite']?></p>
+                                                    <?php }?>
                                                 </ul>
                                             </div>
                                         </div>
@@ -114,9 +91,10 @@
                                             <div class="service-cap">
                                                 <h4>Difficile</h4>
                                                 <ul>
-                                                    <li>pont</li>
-                                                    <li>pompe</li>
-                                                    <li>flection</li>
+                                                    <?php for ($i=0; $i <count($difficile) ; $i++) { ?>
+                                                        <li><h6><?= $difficile[$i]['nom']?></h6></li>
+                                                        <p><?= $difficile[$i]['quantite']?></p>
+                                                    <?php }?>
                                                 </ul>
                                             </div>
                                         </div>
