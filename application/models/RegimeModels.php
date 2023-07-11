@@ -17,6 +17,17 @@ class RegimeModels extends CI_Model
         }
         return $data;
     }
+    public function trier_par_type($table,$types){
+        $data;
+        $a = 0;
+        for ($i=0; $i < count($table); $i++) { 
+            if($table[$i]['types'] == $types){
+                $data[$a] = $table[$i];
+                $a ++;
+            }
+        }
+        return $data;
+    }
 
     public function code_valider($codeentrer){
         $sql = "update code set etat = 11 where idcode = %s";

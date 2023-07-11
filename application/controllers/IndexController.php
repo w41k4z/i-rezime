@@ -25,8 +25,12 @@ class IndexController extends CI_Controller
 	public function regimeChoix(){
 		$poid=$_POST['poids'];
 		$categorie=$_POST['id_categorie'];
-		$data = $this->RegimeModels->regime_par_categorie($poid,$categorie);
-		var_dump($data);
-		// $this->load->view('client/Choix', []);
+		$table = $this->RegimeModels->regime_par_categorie($poid,$categorie);
+		$gagner = $this->RegimeModels->trier_par_type($table,2);
+		$perdre = $this->RegimeModels->trier_par_type($table,1);
+		$data = array('gagner'=> $gagner,'perdre' => $perdre);
+		// var_dump($gagner);
+		// var_dump($perdre);
+		$this->viewer('client/Choix',$data);
 	}
 }
