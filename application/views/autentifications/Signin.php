@@ -19,18 +19,24 @@
                     <div class="auth-form-light text-left py-5 px-4 px-sm-5">
                         <h4>Nouveaux ici?</h4>
                         <h6 class="font-weight-light">Creer un compte est facile. Ca se fait en quelque clique</h6>
-                        <form class="pt-3">
+                        <form class="pt-3" action="<?php echo base_url('index.php/AccountController/new_account') ?>" method="post">
                             <div class="form-group">
-                                <input type="text" class="form-control form-control-lg" id="exampleInputUsername1" placeholder="Nom Utilisateur">
+                                <input type="text" class="form-control form-control-lg" name="name" placeholder="Nom Utilisateur">
                             </div>
                             <div class="form-group">
+                                <input type="text" class="form-control form-control-lg" name="first_name" placeholder="Prenom Utilisateur">
+                            </div>
+                            <div class="form-group">
+                                <input type="date" class="form-control form-control-lg" name="birthdate" placeholder="Date de naissance">
+                            </div>
+                            <!-- <div class="form-group">
                                 <input type="text" class="form-control form-control-lg" id="exampleInputGenre" placeholder="Genre">
+                            </div> -->
+                            <div class="form-group">
+                                <input type="email" class="form-control form-control-lg" name="email" placeholder="Email">
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Email">
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Mot de passe">
+                                <input type="password" class="form-control form-control-lg" name="password" placeholder="Mot de passe">
                             </div>
                             <div class="mb-4">
                                 <div class="form-check">
@@ -44,7 +50,7 @@
                                 <input class="btn btn-block btn-warning btn-lg font-weight-medium auth-form-btn" type="submit" value="SIGN UP">
                             </div>
                             <div class="text-center mt-4 font-weight-light">
-                                Avez vous deja un compte? <a href="#" class="text-primary">Se connecter</a>
+                                Avez vous deja un compte? <a href="<?php echo base_url('index.php/AccountController/login')?>"  class="text-primary">Se connecter</a>
                             </div>
                         </form>
                     </div>

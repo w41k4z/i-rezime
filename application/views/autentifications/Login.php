@@ -30,7 +30,7 @@
                             <input class="btn btn-block btn-warning btn-lg font-weight-medium auth-form-btn" type="submit" value="LOG IN">
                             </div>
                             <div class="text-center mt-4 font-weight-light">
-                                Vous n'avez pas encore de compte?<br><a href="register.html" class="text-primary">Creez-en un</a>
+                                Vous n'avez pas encore de compte?<br><a href="<?php echo base_url('index.php/AccountController/signin')?>" class="text-primary">Creez-en un</a>
                             </div>
                         </form>
                     </div>
