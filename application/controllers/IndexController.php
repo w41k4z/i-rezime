@@ -38,4 +38,15 @@ class IndexController extends CI_Controller
 		// var_dump($perdre);
 		$this->viewer('client/Choix',$data);
 	}
+
+	// --------------------------------------------------
+	public function emploiDuTemps()
+	{
+		$this->viewer('client/EmploiDuTemps', []);
+	}
+	public function code()
+	{
+		$this->viewer('client/Code',[]);
+	}
+	// --------------------------------------------------
 }
