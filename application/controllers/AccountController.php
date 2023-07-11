@@ -16,25 +16,20 @@ class AccountController extends CI_Controller
         $birthday = $this->input->post('birthdate');
         $password = $this->input->post('password');
         $email = $this->input->post('email');
-        echo $username;
-        // creating new account
-        // $signin = $this->AccountModel->insert_user_account($username,$first_name,$birthday,$password,$email);
-        // inserting diet details
-        // var_dump($login);
+        $signin = $this->AccountModel->insert_user_account($username,$first_name,$birthday,$password,$email);
         $this->load->view('autentifications/Information');
     }
-
-    public function login()
-	{
-		$this->load->view('autentifications/Login');
-	}
 	public function signin()
 	{
 		$this->load->view('autentifications/Signin');
 	}
-	public function information()
+    public function information()
 	{
-		$this->load->view('autentifications/Information');
+        $taille = $this->input->post('taille');
+        $poid = $this->input->post('poid');
+        $user = $this->AccountModel->lastInsription();
+        $this->AccountModel->insert_user_account_detail($user,$taille,$poid);
+		$this->load->view('autentifications/Login');
 	}
 }
 ?>

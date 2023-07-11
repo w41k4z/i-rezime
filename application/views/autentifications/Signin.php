@@ -38,14 +38,6 @@
                             <div class="form-group">
                                 <input type="password" class="form-control form-control-lg" name="password" placeholder="Mot de passe">
                             </div>
-                            <div class="mb-4">
-                                <div class="form-check">
-                                    <label class="form-check-label text-muted">
-                                    <input type="checkbox" class="form-check-input">
-                                    J'ai lu et accepte les politiques de confidentialite et les conditions d'utilisation
-                                    </label>
-                                </div>
-                            </div>
                             <div class="mt-3">
                                 <input class="btn btn-block btn-warning btn-lg font-weight-medium auth-form-btn" type="submit" value="SIGN UP">
                             </div>

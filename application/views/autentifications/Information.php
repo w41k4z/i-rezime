@@ -19,15 +19,12 @@
                     <div class="auth-form-light text-left py-5 px-4 px-sm-5">
                         <h4>Vos informations de sante avant tout</h4>
                         <h6 class="font-weight-light">Dans l'application, ces informations sont important</h6>
-                        <form class="pt-3">
+                        <form class="pt-3" method="post" action="<?php echo base_url("index.php/AccountController/Information")?>">
                             <div class="form-group">
-                                <input type="number" class="form-control form-control-lg" name="poids" id="" placeholder="Taille">
+                                <input type="number" class="form-control form-control-lg" name="taille" id="" placeholder="Taille">
                             </div>
                             <div class="form-group">
                                 <input type="number" class="form-control form-control-lg" name="poids" id="" placeholder="Poids">
-                            </div>
-                            <div class="form-group">
-                                <input type="number" class="form-control form-control-lg" name="poids" id="" placeholder="Age">
                             </div>
                             <div class="mt-3">
                                 <input class="btn btn-block btn-warning btn-lg font-weight-medium auth-form-btn" type="submit" value="C'EST PARTI">
