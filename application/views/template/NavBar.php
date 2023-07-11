@@ -19,7 +19,7 @@
                     <i class="fas fa-user me-2"></i>Ma caisse
                 </button>
                 <button class="btn btn-white shadow-warning text-warning" type="submit">
-                    <i class="fas fa-user me-2"></i>Mon compte
+                    <a href="<?php echo base_url("index.php/CodeController/")?>"><i class="fas fa-user me-2"></i>Mon compte</a>
                 </button>
             </div>
         </div>

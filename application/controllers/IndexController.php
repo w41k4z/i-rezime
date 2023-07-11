@@ -32,9 +32,13 @@ class IndexController extends CI_Controller
 		$gagner = $this->RegimeModels->trier_par_type($table,2);
 		$perdre = $this->RegimeModels->trier_par_type($table,1);
 		$data = array('gagner'=> $gagner,'perdre' => $perdre);
-		// var_dump($gagner);
-		// var_dump($perdre);
 		$this->viewer('client/Choix',$data);
+	}
+	public function user_regime(){
+		$user=$_SESSION['userdata'];
+		$regime=$_GET['regime'];
+		$perdre = $this->RegimeModels->insert_user_regime($regime,$user);
+		redirect('IndexController/index');
 	}
 
 	// --------------------------------------------------

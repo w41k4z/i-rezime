@@ -4,6 +4,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class RegimeModels extends CI_Model
 {
 
+    public function insert_user_regime($regime,$user)
+    {
+        $data = array();
+        $data['id_regime'] = $regime;
+        $data['id_user'] = $user;
+        $this->db->insert('user_regime', $data);
+        return $this->db->insert_id();
+    }
     public function regime_par_categorie($poid, $categorie)
     {
         $data = array();

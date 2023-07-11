@@ -28,7 +28,7 @@ class AccountController extends CI_Controller
         $taille = $this->input->post('taille');
         $poid = $this->input->post('poid');
         $user = $this->AccountModel->lastInsription();
-        $this->AccountModel->insert_user_account_detail($user,$taille,$poid);
+        $this->AccountModel->insert_user_account_detail($user[0]['id'],$taille,$poid);
 		$this->load->view('autentifications/Login');
 	}
 }

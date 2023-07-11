@@ -37,8 +37,6 @@ class CodeController extends CI_Controller
         $gagner = $this->RegimeModels->trier_par_type($table, 2);
         $perdre = $this->RegimeModels->trier_par_type($table, 1);
         $data = array('gagner' => $gagner, 'perdre' => $perdre);
-        // var_dump($gagner);
-        // var_dump($perdre);
         $this->viewer('client/Choix', $data);
     }
 
