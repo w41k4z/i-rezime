@@ -21,10 +21,10 @@
                         <h6 class="font-weight-light">Connecter vous a votre compte.</h6>
                         <form class="pt-3">
                             <div class="form-group">
-                                <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Nom Utilisateur">
+                                <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" name="username" placeholder="Nom Utilisateur">
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Mot de passe">
+                                <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" name="password" placeholder="Mot de passe">
                             </div>
                             <div class="mt-3">
                             <input class="btn btn-block btn-warning btn-lg font-weight-medium auth-form-btn" type="submit" value="LOG IN">
@@ -39,7 +39,7 @@
                                 <a href="#" class="auth-link text-black">Forgot password?</a>
                             </div>
                             <div class="text-center mt-4 font-weight-light">
-                                Vous n'avez pas encore de compte?<br><a href="register.html" class="text-primary">Creez-en un</a>
+                                Vous n'avez pas encore de compte?<br><a href="<?php echo base_url('index.php/AccountController/signin')?>" class="text-primary">Creez-en un</a>
                             </div>
                         </form>
                     </div>
