@@ -15,6 +15,7 @@
                                         <th>Matin</th>
                                         <th>Midi</th>
                                         <th>Soir</th>
+                                        <th>Activites</th>
                                     </thead>
                                     <tbody>
                                     <?php 
@@ -29,6 +30,7 @@
                                             <td><?= $table[$i]['matin']?></td>
                                             <td><?= $table[$i]['midi']?></td>
                                             <td><?= $table[$i]['soir']?></td>
+                                            <td><?= $table[$i]['intituleNiveau']?></td>
                                         </tr>
                                         <?php }?>
                                     <?php }?>
@@ -57,9 +59,10 @@
                                             <div class="service-cap">
                                                 <h4>Facile</h4>
                                                 <ul>
-                                                    <li>pont</li>
-                                                    <li>pompe</li>
-                                                    <li>flection</li>
+                                                    <?php for ($i=0; $i <count($facile) ; $i++) { ?>
+                                                        <li><h6><?= $facile[$i]['nom']?></h6></li>
+                                                        <p><?= $facile[$i]['quantite']?></p>
+                                                    <?php }?>
                                                 </ul>
                                             </div>
                                         </div>
@@ -72,9 +75,10 @@
                                             <div class="service-cap">
                                                 <h4>Moyen</h4>
                                                 <ul>
-                                                    <li>pont</li>
-                                                    <li>pompe</li>
-                                                    <li>flection</li>
+                                                    <?php for ($i=0; $i <count($moyen) ; $i++) { ?>
+                                                            <li><h6><?= $moyen[$i]['nom']?></h6></li>
+                                                            <p><?= $moyen[$i]['quantite']?></p>
+                                                    <?php }?>
                                                 </ul>
                                             </div>
                                         </div>
@@ -87,9 +91,10 @@
                                             <div class="service-cap">
                                                 <h4>Difficile</h4>
                                                 <ul>
-                                                    <li>pont</li>
-                                                    <li>pompe</li>
-                                                    <li>flection</li>
+                                                    <?php for ($i=0; $i <count($difficile) ; $i++) { ?>
+                                                        <li><h6><?= $difficile[$i]['nom']?></h6></li>
+                                                        <p><?= $difficile[$i]['quantite']?></p>
+                                                    <?php }?>
                                                 </ul>
                                             </div>
                                         </div>
